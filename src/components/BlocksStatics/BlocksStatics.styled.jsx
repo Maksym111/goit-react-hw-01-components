@@ -10,6 +10,7 @@ export const StaticItem = styled.li`
     align-items: center;
     padding: 10px;
     width: 50px;
+    heig
 
     color: white;
     background-color: #${() => {

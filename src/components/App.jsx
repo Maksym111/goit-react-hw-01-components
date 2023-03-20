@@ -1,8 +1,8 @@
 // import PropTypes from 'prop-types';
-import user from 'user.json'
-import data from 'data.json'
-import friends from 'friends.json'
-import transaction from 'transactions.json'
+import user from '../data/user.json'
+import data from '../data/data.json'
+import friends from '../data/friends.json'
+import transaction from '../data/transactions.json'
 import { Profile } from "./Profile/Profile";
 import { Statistics } from './Statistics/Statistics';
 import { FriendList } from './FriendList/FriendList';
