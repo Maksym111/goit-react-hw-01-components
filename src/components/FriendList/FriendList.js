@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { FriendItem } from 'components/FriendListItem/FriendListItem';
+import { FriendListItem } from 'components/FriendListItem/FriendListItem';
 import { Card, CardsList } from './FriendList.styled';
 
 export const FriendList = ({ friends }) => {
@@ -8,7 +8,7 @@ export const FriendList = ({ friends }) => {
       {friends.map(friend => {
         return (
           <Card key={friend.id}>
-            <FriendItem friend={friend} />
+            <FriendListItem friend={friend} />
           </Card>
         );
       })}
@@ -17,5 +17,12 @@ export const FriendList = ({ friends }) => {
 };
 
 FriendList.propTypes = {
-  friends: PropTypes.arrayOf(PropTypes.object).isRequired,
+  friends: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      avatar: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+      isOnline: PropTypes.bool.isRequired,
+    }).isRequired
+  ).isRequired,
 };
